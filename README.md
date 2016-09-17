@@ -12,6 +12,9 @@ modify `build/service-worker.js`:
 
     *add `importScripts('cache-polyfill.js');` before service-worker.js original code
 
+## Blog
+
+You may read my blog post if you want to know some details:
 [blog](https://blog.arvinh.info/2016/09/17/create-react-pwa-serviceworker/)
 
 ---
