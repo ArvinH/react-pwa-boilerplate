@@ -11,12 +11,14 @@
     "react-dom": "^15.3.1"
   },
   "scripts": {
+    "deploy": "git commit -am \"Save local changes\"; git checkout -B gh-pages; git add -f build; git commit -am \"Rebuild website\"; git filter-branch -f --prune-empty --subdirectory-filter build; git push -f origin gh-pages; git checkout -",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp manifest.json favicon.ico build/ && sw-precache --navigate-fallback='index.html' --root='build/' --static-file-globs='build/**/!(*map*)'",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
-  }
+  },
+  "homepage": "https://blog.arvinh.info/react-pwa-boilerplate"
 }
