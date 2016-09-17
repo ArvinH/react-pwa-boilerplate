@@ -5,8 +5,11 @@ Boilerplate for React progressive web app
 `npm run build`
 
 modify `build/index.html`:
+    
     *change `<link rel="manifest" href="./manifest.json">` to `<link rel="manifest" href="./manifest.json">`
+
 modify `build/service-worker.js`:
+
     *add `importScripts('cache-polyfill.js');` before service-worker.js original code
 
 [blog](https://blog.arvinh.info/2016/09/17/create-react-pwa-serviceworker/)
