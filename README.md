@@ -1,5 +1,16 @@
 Boilerplate for React progressive web app
 
+# build
+
+`npm run build`
+
+modify `build/index.html`:
+    *change `<link rel="manifest" href="./manifest.json">` to `<link rel="manifest" href="./manifest.json">`
+modify `build/service-worker.js`:
+    *add `importScripts('cache-polyfill.js');` before service-worker.js original code
+
+[blog](https://blog.arvinh.info/2016/09/17/create-react-pwa-serviceworker/)
+
 ---
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
